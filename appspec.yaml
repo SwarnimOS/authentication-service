@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/pms-authentication-server-SP:1"
+        LoadBalancerInfo:
+          ContainerName: "pms-authentication-server-SP"
+          ContainerPort: "8085"
+        PlatformVersion: "LATEST"
